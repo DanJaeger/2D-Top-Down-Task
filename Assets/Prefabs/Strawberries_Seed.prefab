@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8063729585611669178}
   - component: {fileID: 8063729585611669179}
   - component: {fileID: 8063729585611669176}
-  - component: {fileID: 8063729585611667781}
   - component: {fileID: -5216793308198615892}
   m_Layer: 0
   m_Name: Strawberries_Seed
@@ -27,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8063729585611669177}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.657715, y: 0.028084993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8063729585611669179
 SpriteRenderer:
@@ -89,7 +88,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &8063729585611669176
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,29 +105,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8063729585611667781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8063729585611669177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec6dbe8c51c03c84d87b75168ba8d653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <InventoryItem>k__BackingField: {fileID: 11400000, guid: 6d0d3cccf1b48c44586a16adc3d90fef, type: 2}
-  <Quantity>k__BackingField: 1
-  _itemsToGrow:
-  - {fileID: 11400000, guid: 6d0d3cccf1b48c44586a16adc3d90fef, type: 2}
-  - {fileID: 11400000, guid: 84c50cdbc6de4ec46860a172cf25d940, type: 2}
-  - {fileID: 11400000, guid: ce9848ff59a8dad45b88ef95b6e83b12, type: 2}
-  CanPickUp: 0
-  IsRotten: 0
-  prizeToSell: 15
-  prizeToBuySeed: 25
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &-5216793308198615892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,6 +117,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
