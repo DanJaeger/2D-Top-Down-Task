@@ -1,3 +1,5 @@
+using HUD;
+using Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +9,11 @@ public class PlayerController : MonoBehaviour
     [Header(header: "Components: ")]
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Animator _animator;
+
+    public HungerCounterHandler Hunger;
+    public OutfitChanger ClothingChanger;
+    [SerializeField] private ShopSystem _shopSystem;
+    [SerializeField] private InventoryController _inventoryController;
 
     [Header(header: "Movement: ")]
     [SerializeField] private float _moveSpeed = 5.0f;
@@ -31,6 +38,14 @@ public class PlayerController : MonoBehaviour
                 Debug.LogError("Could NOT access Animator Component on " + this.name);
             }
         }
+        if (_inventoryController == null)
+        {
+            _inventoryController = GetComponent<InventoryController>();
+            if (_inventoryController == null)
+            {
+                Debug.LogError("Could NOT access InventoryController Component on " + this.name);
+            }
+        }
     }
     private void Start()
     {
@@ -40,15 +55,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetPlayerInput();
-        if (Input.GetKeyDown(KeyCode.E) && CanInteract)
+        if (Input.GetKeyDown(KeyCode.E) && CanInteract && !ShopSystem.IsPlayingIntro)
         {
-            Debug.Log("Interactuando con tienda");
+            _shopSystem.OpenShop();
+        }else if (Input.GetKeyDown(KeyCode.E) && !CanInteract && !ShopSystem.IsPlayingIntro)
+        {
+            _inventoryController.DisplayInventory();
         }
     }
     void GetPlayerInput()
     {
         _playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        Debug.Log(_playerInput);
 
         UpdateAnimation();
         UpdateSpriteRotation();
@@ -82,10 +99,23 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        CanInteract = true;   
+        ShopSystem shop = collision.GetComponent<ShopSystem>();
+        if (shop != null)
+        {
+            CanInteract = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        CanInteract = false;
+        ShopSystem shop = collision.GetComponent<ShopSystem>();
+        if (shop != null)
+        {
+            CanInteract = false;
+        }
     }
+    public void PlayStepAudio()
+    {
+        SoundFXManager.instance.PlayStepSound();
+    }
+
 }

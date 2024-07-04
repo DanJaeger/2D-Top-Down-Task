@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5283171456067843008
+--- !u!1 &8063729585611669177
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5283171456067843011}
-  - component: {fileID: 5283171456067843010}
-  - component: {fileID: 5283171456067843009}
-  - component: {fileID: 1563643047560288287}
+  - component: {fileID: 8063729585611669178}
+  - component: {fileID: 8063729585611669179}
+  - component: {fileID: 8063729585611669176}
+  - component: {fileID: -5216793308198615892}
+  - component: {fileID: 361071946947356474}
   m_Layer: 0
-  m_Name: Potatoes_Seed
+  m_Name: Strawberries_Seed
   m_TagString: Interactable
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5283171456067843011
+--- !u!4 &8063729585611669178
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5283171456067843008}
+  m_GameObject: {fileID: 8063729585611669177}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.126726, y: 0.03, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.657715, y: 0.028084993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5283171456067843010
+--- !u!212 &8063729585611669179
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5283171456067843008}
+  m_GameObject: {fileID: 8063729585611669177}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -8
-  m_Sprite: {fileID: 21300000, guid: a402c3ecefb2ea44abb2dc8fef3e46d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ab91e9d95a123540a91a4bdf095faf1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,17 +87,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5283171456067843009
+--- !u!95 &8063729585611669176
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5283171456067843008}
+  m_GameObject: {fileID: 8063729585611669177}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 32ee9a89c4174364cade9794fd9cfb1c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 899d56e75faaf5242a76158ea6c56814, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,13 +108,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &1563643047560288287
+--- !u!61 &-5216793308198615892
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5283171456067843008}
+  m_GameObject: {fileID: 8063729585611669177}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -152,3 +153,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &361071946947356474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063729585611669177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6dbe8c51c03c84d87b75168ba8d653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <InventoryItem>k__BackingField: {fileID: 11400000, guid: 6d0d3cccf1b48c44586a16adc3d90fef, type: 2}
+  <Quantity>k__BackingField: 1
+  _itemsToGrow:
+  - {fileID: 11400000, guid: 6d0d3cccf1b48c44586a16adc3d90fef, type: 2}
+  - {fileID: 11400000, guid: 84c50cdbc6de4ec46860a172cf25d940, type: 2}
+  - {fileID: 11400000, guid: ce9848ff59a8dad45b88ef95b6e83b12, type: 2}
+  CanPickUp: 0
+  IsRotten: 0
