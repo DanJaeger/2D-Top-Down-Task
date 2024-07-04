@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && CanInteract && !ShopSystem.IsPlayingIntro)
         {
             _shopSystem.OpenShop();
-        }else if (Input.GetKeyDown(KeyCode.E) && !CanInteract && !ShopSystem.IsPlayingIntro)
+        }else if (Input.GetKeyDown(KeyCode.E) && !CanInteract && !ShopSystem.IsPlayingIntro && !ShopSystem.IsShopOpen)
         {
             _inventoryController.DisplayInventory();
         }

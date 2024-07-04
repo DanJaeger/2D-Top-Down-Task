@@ -13719,7 +13719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2086613762864730553, guid: 4dc252510e3b6b84fae5dea3fafe5cbb, type: 3}
       propertyPath: _input
-      value: Or even sell what you have
+      value: You can also sell me anything
       objectReference: {fileID: 0}
     - target: {fileID: 2086613762864730553, guid: 4dc252510e3b6b84fae5dea3fafe5cbb, type: 3}
       propertyPath: _sound
@@ -16025,7 +16025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2086613762864730553, guid: 4dc252510e3b6b84fae5dea3fafe5cbb, type: 3}
       propertyPath: _input
-      value: What can I get ya?
+      value: What can I do for ya?
       objectReference: {fileID: 0}
     - target: {fileID: 2086613762864730553, guid: 4dc252510e3b6b84fae5dea3fafe5cbb, type: 3}
       propertyPath: _sound

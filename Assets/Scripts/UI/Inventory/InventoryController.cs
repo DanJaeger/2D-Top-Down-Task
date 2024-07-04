@@ -94,15 +94,16 @@ namespace Inventory
             if (inventoryItem.IsEmpty)
                 return;
 
-            IItemAction itemAction = inventoryItem.ItemSO as IItemAction;
-            if(itemAction != null)
-            {
-                itemAction.PerformAction(this.gameObject);
-            }
             IDestroyableItem destroyableItem = inventoryItem.ItemSO as IDestroyableItem;
             if(destroyableItem != null)
             {
                 _inventoryData.RemoveItem(itemIndex, 1);
+            }
+
+            IItemAction itemAction = inventoryItem.ItemSO as IItemAction;
+            if (itemAction != null)
+            {
+                itemAction.PerformAction(this.gameObject);
             }
         }
         private void HandleDescriptionRequest(int itemIndex)
