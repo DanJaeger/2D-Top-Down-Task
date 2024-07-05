@@ -65,7 +65,14 @@ public class PlayerController : MonoBehaviour
     }
     void GetPlayerInput()
     {
-        _playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if(_shopSystem.IsPanelActive())
+        {
+            _playerInput = Vector2.zero;
+        }
+        else
+        {
+            _playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        }
 
         UpdateAnimation();
         UpdateSpriteRotation();

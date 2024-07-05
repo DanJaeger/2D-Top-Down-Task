@@ -69,4 +69,11 @@ public class ShopSystem : MonoBehaviour
         _sellPriceText.SetActive(false);
         _shopMenuPanel.SetActive(true);
     }
+    public bool IsPanelActive()
+    {
+        if (_shopMenuPanel.activeInHierarchy || _inventoryPanel.activeInHierarchy || _shopIntroPanel.activeInHierarchy)
+            return true;
+        else
+            return false;
+    }
 }
